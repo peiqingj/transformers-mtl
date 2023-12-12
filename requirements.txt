@@ -1,0 +1,3 @@
+transformers
+-i https://download.pytorch.org/whl/cpu
+torch
