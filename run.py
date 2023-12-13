@@ -1,7 +1,9 @@
 # Load model directly
 import transformers
+from modeling_llama import LlamaAttentionNPU
 
 
+transformers.models.llama.modeling_llama.LlamaAttention = LlamaAttentionNPU  # hacking LlamaAttention
 streamer=transformers.TextStreamer(None)
 p = transformers.pipeline(
     'text-generation',
