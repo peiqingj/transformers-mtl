@@ -1,5 +1,8 @@
 # Load model directly
 import transformers
+import modeling_qwen
+
+modeling_qwen.hack_mlp()
 
 tokenizer = transformers.AutoTokenizer.from_pretrained(
     "Qwen/Qwen-1_8B-Chat", trust_remote_code=True
